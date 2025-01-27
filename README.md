@@ -1,4 +1,4 @@
-CMPUT 503 Lab 1
+# CMPUT 503 Lab 1
 
 This is the repository for CMPUT 503 Exercise 1, where lab_exercises is the package we created under packages. The exercise_1_script.py is under the lab_exercises package. This is the python program to run on the duckiebot to print a hello message.
  
