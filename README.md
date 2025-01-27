@@ -1,47 +1,16 @@
-# Template: template-basic
+CMPUT 503 Lab 1
 
-This template provides a boilerplate repository for developing non-ROS software
-in Duckietown.
-
-**NOTE:** If you want to develop software that uses ROS, check out
-[this template](https://github.com/duckietown/template-ros).
-
-
+This is the repository for CMPUT 503 Exercise 1, where lab_exercises is the package we created under packages. The exercise_1_script.py is under the lab_exercises package. This is the python program to run on the duckiebot to print a hello message.
+ 
 ## How to use it
 
-### 1. Fork this repository
+### 1. building docker image on robot
+`dts devel build -f --arch arm32v7 -H MY_ROBOT.local`
 
-Use the fork button in the top-right corner of the github page to fork this template repository.
-
-
-### 2. Create a new repository
-
-Create a new repository on github.com while
-specifying the newly forked template repository as
-a template for your new repository.
+### 2. running program on robot
+`docker -H MY_ROBOT.local run -it --rm --net=host duckietown/my-program:latest-arm32v7`
 
 
-### 3. Define dependencies
+## Collaboration
 
-List the dependencies in the files `dependencies-apt.txt` and
-`dependencies-py3.txt` (apt packages and pip packages respectively).
-
-
-### 4. Place your code
-
-Place your code in the directory `/packages/` of
-your new repository.
-
-
-### 5. Setup launchers
-
-The directory `/launchers` can contain as many launchers (launching scripts)
-as you want. A default launcher called `default.sh` must always be present.
-
-If you create an executable script (i.e., a file with a valid shebang statement)
-a launcher will be created for it. For example, the script file 
-`/launchers/my-launcher.sh` will be available inside the Docker image as the binary
-`dt-launcher-my-launcher`.
-
-When launching a new container, you can simply provide `dt-launcher-my-launcher` as
-command.
+I collaborated with Minh Pham, phamcnm, on completing the code for this exercise.
